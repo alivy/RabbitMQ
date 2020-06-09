@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQExample", "RabbitMQExample\RabbitMQExample.csproj", "{DBE11AC9-3097-4FF9-969E-416C19911E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQSend", "MQSend\MQSend.csproj", "{F0FFB5E2-F53D-4605-83D5-88FCA5AC272C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQReceive", "MQReceive\MQReceive.csproj", "{36017C2C-28EB-4A29-92B9-B5FC71466117}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBE11AC9-3097-4FF9-969E-416C19911E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE11AC9-3097-4FF9-969E-416C19911E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE11AC9-3097-4FF9-969E-416C19911E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE11AC9-3097-4FF9-969E-416C19911E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0FFB5E2-F53D-4605-83D5-88FCA5AC272C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0FFB5E2-F53D-4605-83D5-88FCA5AC272C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0FFB5E2-F53D-4605-83D5-88FCA5AC272C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0FFB5E2-F53D-4605-83D5-88FCA5AC272C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36017C2C-28EB-4A29-92B9-B5FC71466117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36017C2C-28EB-4A29-92B9-B5FC71466117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36017C2C-28EB-4A29-92B9-B5FC71466117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36017C2C-28EB-4A29-92B9-B5FC71466117}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7813FF57-8CB6-49E3-999D-EA739BEAF284}
+	EndGlobalSection
+EndGlobal
