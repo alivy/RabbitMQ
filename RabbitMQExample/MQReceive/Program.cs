@@ -26,7 +26,8 @@ namespace MQReceive
                 using (var channel = connection.CreateModel())
                 {
                     #region 获取队列方式
-                    EventingBasicConsumer(channel);
+                    LogConsumer(channel);
+                    LogError(channel);
                     #endregion
                     Console.ReadLine();
                 }
@@ -62,5 +63,48 @@ namespace MQReceive
             };
             channel.BasicConsume(queue: "mytestQueue", autoAck: true, consumer: consumer);
         }
+
+
+
+        /// <summary>
+        ///  日志记录场景分析之如何使用将routingkey绑定到各自的queue来实现实际场景的按需定制
+        /// </summary>
+        private static void LogConsumer(IModel channel)
+        {
+            channel.ExchangeDeclare("logExchange", ExchangeType.Direct, true, false, null);
+            channel.QueueDeclare("logElse", true, false, false, null);
+            var arryLog = new string[3] { "debug", "info", "warning" };
+            for (int i = 0; i < arryLog.Length; i++)
+            {
+                channel.QueueBind("logElse", "logExchange", arryLog[i], null); //一定要绑定至消息队列
+            }
+            var consumer = new EventingBasicConsumer(channel);
+            consumer.Received += (model, ea) =>
+            {
+                var message = Encoding.UTF8.GetString(ea.Body.ToArray());
+                Console.WriteLine("已接收： {0}", message);
+            };
+            channel.BasicConsume(queue: "logElse", autoAck: true, consumer: consumer);
+        }
+
+
+        /// <summary>
+        ///  记录错误日志
+        /// </summary>
+        private static void LogError(IModel channel)
+        {
+            channel.ExchangeDeclare("logExchange", ExchangeType.Direct, true, false, null);
+            channel.QueueDeclare("logError", true, false, false, null);
+          
+            channel.QueueBind("logError", "logExchange", "error", null); //一定要绑定至消息队列
+            var consumer = new EventingBasicConsumer(channel);
+            consumer.Received += (model, ea) =>
+            {
+                var message = Encoding.UTF8.GetString(ea.Body.ToArray());
+                Console.WriteLine("已接收： {0}", message);
+            };
+            channel.BasicConsume(queue: "logError", autoAck: true, consumer: consumer);
+        }
+
     }
 }
