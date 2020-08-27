@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQReceive", "MQReceive\MQRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQSendTwo", "MQSendTwo\MQSendTwo.csproj", "{52BFDECA-5AD0-49F0-B5C6-9C36CE200C64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQReceiveTwo", "MQReceiveTwo\MQReceiveTwo.csproj", "{D6E85E54-B507-4E94-94B9-6236222F2431}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{52BFDECA-5AD0-49F0-B5C6-9C36CE200C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52BFDECA-5AD0-49F0-B5C6-9C36CE200C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52BFDECA-5AD0-49F0-B5C6-9C36CE200C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E85E54-B507-4E94-94B9-6236222F2431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E85E54-B507-4E94-94B9-6236222F2431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E85E54-B507-4E94-94B9-6236222F2431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E85E54-B507-4E94-94B9-6236222F2431}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
